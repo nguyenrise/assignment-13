@@ -11,8 +11,8 @@ test("renders text", () => {
 test("color changes when disabled", () => {
   const { rerender } = render(<Text disabled={false} />);
   const textElement = screen.getByText(/Some text/i);
-  expect(textElement).toHaveStyle("color: black");
+  expect(textElement).toHaveStyle("color: rgb(0, 0, 0)");
 
   rerender(<Text disabled={true} />);
-  expect(textElement).toHaveStyle("color: grey");
+  expect(textElement).toHaveStyle("color: rgb(128, 128, 128)");
 });

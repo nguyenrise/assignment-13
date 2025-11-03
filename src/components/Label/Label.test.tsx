@@ -11,8 +11,8 @@ test("renders label", () => {
 test("color changes when disabled", () => {
   const { rerender } = render(<Label disabled={false} />);
   const labelElement = screen.getByText(/Label/i);
-  expect(labelElement).toHaveStyle("color: black");
+  expect(labelElement).toHaveStyle("color: rgb(0, 0, 0)");
 
   rerender(<Label disabled={true} />);
-  expect(labelElement).toHaveStyle("color: grey");
+  expect(labelElement).toHaveStyle("color: rgb(128, 128, 128)");
 });

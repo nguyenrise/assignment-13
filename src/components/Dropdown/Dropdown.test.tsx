@@ -13,7 +13,7 @@ test("renders dropdown", () => {
 test("background color changes when disabled", () => {
   const { rerender } = render(<Dropdown options={options} disabled={false} />);
   const dropdownElement = screen.getByRole("combobox");
-  expect(dropdownElement).toHaveStyle("background-color: white");
+  expect(dropdownElement).toHaveStyle("background-color: rgb(255, 255, 255)");
 
   rerender(<Dropdown options={options} disabled={true} />);
   expect(dropdownElement).toHaveStyle("background-color: #f2f2f2");
